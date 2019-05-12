@@ -226,7 +226,7 @@
       "execute_command": "echo '{{user `ssh_password`}}' | {{.Vars}} sudo -E -S sh '{{.Path}}'",
       "inline": [
         "apt-get update",
-        "apt-get upgrade -y",
+        "apt-get dist-upgrade -y",
         "echo [SeatDefaults] >> /etc/lightdm/lightdm.conf",
         "echo user-session=xubuntu >> /etc/lightdm/lightdm.conf",
         "echo autologin-user=contest >> /etc/lightdm/lightdm.conf"
