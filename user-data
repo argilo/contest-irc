@@ -11,6 +11,7 @@ autoinstall:
     username: contest
   packages:
     - xubuntu-core
+    - firefox
     - nodejs
     - npm
   late-commands:
