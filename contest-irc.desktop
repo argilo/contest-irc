@@ -4,4 +4,4 @@ Type=Link
 Name=Contest IRC
 Comment=
 Icon=applications-chat
-URL=http://localhost:7778/
+URL=http://localhost/
