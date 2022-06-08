@@ -11,7 +11,7 @@ autoinstall:
     username: contest
   packages:
     - xubuntu-core
-    - firefox
+    - hexchat
     - nodejs
     - npm
   late-commands:
@@ -21,11 +21,6 @@ autoinstall:
     - echo user-session=xubuntu >> /target/etc/lightdm/lightdm.conf.d/login.conf
     - echo autologin-user=contest >> /target/etc/lightdm/lightdm.conf.d/login.conf
     - git clone https://github.com/argilo/contest-irc.git /target/opt/contest-irc
-    - mkdir -p /target/etc/skel/Desktop
-    - cp /target/opt/contest-irc/contest-irc.desktop /target/etc/skel/Desktop/
-    - chmod u+x /target/etc/skel/Desktop/contest-irc.desktop
-    - mkdir -p /target/etc/skel/.local/share/applications
-    - cp /target/opt/contest-irc/contest-irc.desktop /target/etc/skel/.local/share/applications/
     - cp /target/opt/contest-irc/Contest /target/etc/NetworkManager/system-connections/
     - chmod 600 /target/etc/NetworkManager/system-connections/Contest
     - mkdir -p /target/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
