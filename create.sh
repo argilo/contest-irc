@@ -4,7 +4,7 @@ set -e
 
 SERVER_ISO=~/Downloads/ubuntu-22.04.2-live-server-amd64.iso
 BASE_DIR=$(dirname -- "$0")
-OUT_IMG=${BASE_DIR}/disk.img
+OUT_IMG=${BASE_DIR}/contest-irc.img
 HTTP_PORT=3003
 
 sudo mount -r ${SERVER_ISO} /mnt
