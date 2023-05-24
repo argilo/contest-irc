@@ -12,14 +12,19 @@ GHz amateur band in contests such as the
 
 Install the dependencies:
 
-* Packer https://www.packer.io/
-* qemu-kvm
-* apt-cacher-ng
+* qemu-utils
+* qemu-system-x86
 
 Run the following:
 ```
-PACKER_CACHE_DIR=/tmp packer build -only=qemu base-bionic.json
-zcat build/2019-04-28-20-03/base-bionic.raw.gz | sudo dd of=/dev/sdb bs=4M
+./create.sh
+```
+This will generate a disk image (`contest-irc.img`), which can be flashed to a USB
+drive using `dd`.
+
+Optionally, create a VirtualBox VDI:
+```
+VBoxManage convertfromraw --format VDI contest-irc.img contest-irc.vdi
 ```
 
 ## Usage
@@ -32,14 +37,9 @@ From another laptop or smartphone, connect to the VE3WCC access point. Then
 launch a web browser and visit http://10.42.0.1:7778/. Enter your call sign in
 the "Nickname" field and click "Start..." to join the chat room.
 
-## Thanks
-
-The packer template is adapted from Tyler Tidman's
-[packer-build](https://github.com/tylert/packer-build) project.
-
 ## License
 
-Copyright 2017-2019 Clayton Smith
+Copyright 2017-2023 Clayton Smith
 
 This file is part of contest-irc
 
