@@ -37,3 +37,4 @@ autoinstall:
     - git clone https://github.com/prawnsalad/KiwiIRC.git /target/opt/KiwiIRC
     - cp /target/opt/contest-irc/config.js /target/opt/KiwiIRC/
     - curtin in-target --target=/target -- npm --prefix /opt/KiwiIRC install
+    - curtin in-target --target=/target -- sh -c 'cd /opt/KiwiIRC && ./kiwi build'
