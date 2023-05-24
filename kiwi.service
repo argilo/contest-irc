@@ -1,0 +1,11 @@
+[Unit]
+Description=Kiwi web IRC client
+Requires=network.target
+After=network.target
+
+[Service]
+ExecStart=/opt/KiwiIRC/kiwi start
+Type=forking
+
+[Install]
+WantedBy=multi-user.target

@@ -38,3 +38,5 @@ autoinstall:
     - cp /target/opt/contest-irc/config.js /target/opt/KiwiIRC/
     - curtin in-target --target=/target -- npm --prefix /opt/KiwiIRC install
     - curtin in-target --target=/target -- sh -c 'cd /opt/KiwiIRC && ./kiwi build'
+    - cp /target/opt/contest-irc/kiwi.service /target/etc/systemd/system/
+    - curtin in-target --target=/target -- systemctl enable kiwi.service
