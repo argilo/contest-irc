@@ -19,8 +19,11 @@ Run the following:
 ```
 ./create.sh
 ```
-This will generate a disk image (`contest-irc.img`), which can be flashed to a USB
-drive using `dd`.
+This will generate a disk image (`contest-irc.img`), which can be flashed to a
+USB drive:
+```
+sudo dd if=contest-irc.img of=/dev/sdb bs=4M
+```
 
 Optionally, create a VirtualBox VDI:
 ```
