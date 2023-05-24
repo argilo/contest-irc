@@ -26,6 +26,10 @@ autoinstall:
     - git clone https://github.com/argilo/contest-irc.git /target/opt/contest-irc
     - cp /target/opt/contest-irc/servlist.conf /target/etc/skel/.config/hexchat/servlist.conf
     - sed -i 's/gui_slist_skip = 0/gui_slist_skip = 1/' /target/etc/skel/.config/hexchat/hexchat.conf
+    - echo >> /target/etc/skel/.config/hexchat/hexchat.conf
+    - echo 'irc_nick1 = VE3WCC' >> /target/etc/skel/.config/hexchat/hexchat.conf
+    - echo 'irc_nick2 = VE3WCC_' >> /target/etc/skel/.config/hexchat/hexchat.conf
+    - echo 'irc_nick3 = VE3WCC__' >> /target/etc/skel/.config/hexchat/hexchat.conf
     - cp /target/opt/contest-irc/Contest /target/etc/NetworkManager/system-connections/
     - chmod 600 /target/etc/NetworkManager/system-connections/Contest
     - mkdir -p /target/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
