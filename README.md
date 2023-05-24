@@ -25,19 +25,18 @@ USB drive:
 sudo dd if=contest-irc.img of=/dev/sdb bs=4M
 ```
 
-Optionally, create a VirtualBox VDI:
+Or, convert the image to a VirtualBox VDI:
 ```
 VBoxManage convertfromraw --format VDI contest-irc.img contest-irc.vdi
 ```
 
 ## Usage
 
-Boot from the flash drive and double click the "Contest IRC" icon on the
-desktop. Enter your call sign in the "Nickname" field and click "Start..." to
-join the chat room.
+Boot from the flash drive or VDI and double click the "Hexchat" icon on the
+desktop. This will automatically join the chat room.
 
 From another laptop or smartphone, connect to the VE3WCC access point. Then
-launch a web browser and visit http://10.42.0.1:7778/. Enter your call sign in
+launch a web browser and visit http://10.42.0.1/. Enter your call sign in
 the "Nickname" field and click "Start..." to join the chat room.
 
 ## License
