@@ -30,8 +30,10 @@ autoinstall:
     - echo 'irc_nick1 = VE3WCC' >> /target/etc/skel/.config/hexchat/hexchat.conf
     - echo 'irc_nick2 = VE3WCC_' >> /target/etc/skel/.config/hexchat/hexchat.conf
     - echo 'irc_nick3 = VE3WCC__' >> /target/etc/skel/.config/hexchat/hexchat.conf
-    - cp /target/opt/contest-irc/Contest /target/etc/NetworkManager/system-connections/
-    - chmod 600 /target/etc/NetworkManager/system-connections/Contest
+    - cp /target/opt/contest-irc/VE3WCC.nmconnection /target/etc/NetworkManager/system-connections/
+    - chmod 600 /target/etc/NetworkManager/system-connections/VE3WCC.nmconnection
+    - cp /target/opt/contest-irc/VE3WCC-5G.nmconnection /target/etc/NetworkManager/system-connections/
+    - chmod 600 /target/etc/NetworkManager/system-connections/VE3WCC-5G.nmconnection
     - mkdir -p /target/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml
     - cp /target/opt/contest-irc/xfce4-screensaver.xml /target/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/
     - git clone https://github.com/prawnsalad/KiwiIRC.git /target/opt/KiwiIRC

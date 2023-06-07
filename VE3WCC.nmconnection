@@ -1,27 +1,22 @@
 [connection]
-id=Contest
+id=VE3WCC
 uuid=a1f57856-fa5d-4865-9c6e-0e6d0476c749
 type=wifi
 interface-name=wlx30b5c2119f91
-permissions=
-secondaries=
+timestamp=1686160151
 
 [wifi]
 band=bg
 channel=1
 mac-address=30:B5:C2:11:9F:91
-mac-address-blacklist=
-mac-address-randomization=0
 mode=ap
-seen-bssids=
 ssid=VE3WCC
 
 [ipv4]
-dns-search=
 method=shared
 
 [ipv6]
 addr-gen-mode=stable-privacy
-dns-search=
-ip6-privacy=0
 method=ignore
+
+[proxy]
