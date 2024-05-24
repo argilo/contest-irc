@@ -16,8 +16,7 @@ autoinstall:
     - npm
   late-commands:
     - mkdir /target/etc/skel/Desktop
-    - cp /target/usr/share/applications/io.github.Hexchat.desktop /target/etc/skel/Desktop/
-    - chmod +x /target/etc/skel/Desktop/io.github.Hexchat.desktop
+    - curtin in-target --target=/target -- ln -s /usr/share/applications/io.github.Hexchat.desktop /etc/skel/Desktop/
     - curtin in-target --target=/target -- apt-get -y purge gdm3
     - HOME=/root curtin in-target --target=/target -- apt-get -y install ircd-hybrid
     - echo [SeatDefaults] >> /target/etc/lightdm/lightdm.conf.d/login.conf
