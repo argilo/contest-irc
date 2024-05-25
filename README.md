@@ -41,7 +41,7 @@ the "Nickname" field and click "Start..." to join the chat room.
 
 ## License
 
-Copyright 2017-2023 Clayton Smith
+Copyright 2017-2024 Clayton Smith
 
 This file is part of contest-irc
 
