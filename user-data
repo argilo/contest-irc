@@ -24,6 +24,10 @@ autoinstall:
     - echo user-session=xubuntu >> /target/etc/lightdm/lightdm.conf.d/login.conf
     - echo autologin-user=contest >> /target/etc/lightdm/lightdm.conf.d/login.conf
     - git clone https://github.com/argilo/contest-irc.git /target/opt/contest-irc
+    - mkdir -p /target/etc/skel/.config/autostart
+    - cp /target/opt/contest-irc/trust_desktop.desktop /target/etc/skel/.config/autostart/trust_desktop.desktop
+    - cp /target/opt/contest-irc/trust_desktop.sh /target/etc/skel/trust_desktop.sh
+    - chmod +x /target/etc/skel/trust_desktop.sh
     - cp /target/opt/contest-irc/servlist.conf /target/etc/skel/.config/hexchat/servlist.conf
     - sed -i 's/gui_slist_skip = 0/gui_slist_skip = 1/' /target/etc/skel/.config/hexchat/hexchat.conf
     - echo >> /target/etc/skel/.config/hexchat/hexchat.conf
