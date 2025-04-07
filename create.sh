@@ -15,7 +15,7 @@ qemu-system-x86_64 \
     -enable-kvm \
     -no-reboot \
     -m 2048 \
-    -smp 2 \
+    -smp 4 \
     -drive file=${OUT_IMG},format=raw,cache=none,if=virtio \
     -cdrom ${SERVER_ISO} \
     -kernel /mnt/casper/vmlinuz \
